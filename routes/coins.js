@@ -3,7 +3,7 @@ const router = express.Router()
 const https = require('https')
 
 router.get('/', (req, res, next) => {
-  https.get('https://api.coinmarketcap.com/v1/ticker/?limit=10', resp => {
+  https.get('https://api.coinmarketcap.cosm/v1/ticker/?limit=10', resp => {
       let data = ''
 
       resp.on('data', chunk => {

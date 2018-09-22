@@ -16,7 +16,7 @@ class ListsCurr extends Component {
     return (
         <section className="container-list">
           {
-            data.map((item, key) =>
+            data.length &data.map((item, key) =>
               <CurrencyItem item={item} key={key}/>
             )
           }

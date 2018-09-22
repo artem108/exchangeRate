@@ -27,6 +27,7 @@ export const validateForm = form => {
         break;
       case 'password':
         const passwordValid = form[field].length >= 2;
+
           if (passwordValid) {
             form.hasErrors = false
             form.formErrors.password = ''
@@ -40,13 +41,4 @@ export const validateForm = form => {
     }
   }
   return form
-}
-
-
-export const createPaginate = (page, [...rows]) => {
-  const countItems = 3
-  rows.splice(page * countItems, rows.length - page * countItems)
-  rows.splice(0, page * countItems - countItems)
-
-  return rows
 }
